@@ -33,7 +33,7 @@ pipeline {
 
     stage('Integration Test') {
       steps {
-        node(label: 'Test') {
+        node(label: 'test') {
           sh './mvnw verify -P tomcat90'
         }
 
