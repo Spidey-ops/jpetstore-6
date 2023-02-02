@@ -31,5 +31,14 @@ pipeline {
       }
     }
 
+    stage('Integration Test') {
+      steps {
+        node(label: 'test') {
+          sh './mvnw verify -P tomcat90'
+        }
+
+      }
+    }
+
   }
 }
