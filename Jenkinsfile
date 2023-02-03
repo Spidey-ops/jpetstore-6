@@ -34,7 +34,7 @@ pipeline {
     stage('Integration Test') {
       steps {
         node(label: 'test') {
-          sh '''./mvnw cargo:run -P tomcat90
+          sh '''mvn verify -P tomcat90
 
 '''
         }
